@@ -1,4 +1,5 @@
-FROM openjdk:17.0.2
+FROM openjdk:8-jdk-slim
+
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 RUN ./mvnw clean package
