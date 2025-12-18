@@ -1,6 +1,5 @@
-FROM openjdk:17.0.2
+FROM eclipse-temurin:11-jre
+WORKDIR /app
+COPY target/*.jar app.jar
 EXPOSE 8070
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
-RUN ./mvnw clean package -DskipTests
-CMD ./mvnw cargo:run -P tomcat90
+CMD ["java", "-jar", "app.jar"]
