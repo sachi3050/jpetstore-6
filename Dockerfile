@@ -1,5 +1,5 @@
-FROM openjdk:8-jdk-slim
-
+FROM openjdk:17.0.2
+EXPOSE 8070
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 RUN ./mvnw clean package
