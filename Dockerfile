@@ -1,4 +1,4 @@
-FROM eclipse-temurin:11-jre
+FROM adoptopenjdk/openjdk11:alpine-jre
 WORKDIR /app
 COPY target/myapp-0.0.1-SNAPSHOT.jar app.jar
 
