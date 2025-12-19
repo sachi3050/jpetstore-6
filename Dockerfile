@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 WORKDIR /app
-COPY target/myapp-0.0.1-SNAPSHOT.jar app.jar
+COPY target/jpetstore.war app.jar
 
 EXPOSE 8070
 ENTRYPOINT ["java", "-jar", "app.jar"]
